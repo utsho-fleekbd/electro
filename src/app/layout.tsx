@@ -1,21 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { TopBar } from "./_components/top-bar";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Electro",
@@ -29,11 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("font-sans", inter.variable)}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-[#333d47]`}
-      >
-        <TopBar />
-        {children}
+      <body className={`antialiased bg-white text-[#333d47] overflow-x-hidden`}>
+        <TooltipProvider>
+          <TopBar />
+          <main className="py-6">{children}</main>
+        </TooltipProvider>
       </body>
     </html>
   );
