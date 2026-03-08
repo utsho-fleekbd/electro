@@ -42,7 +42,7 @@ export function Actions() {
           </Tooltip>
         </li>
       ))}
-      <li className="text-base font-bold">$1785.00</li>
+      <li className="hidden lg:block text-base font-bold">$1785.00</li>
     </ul>
   );
 }

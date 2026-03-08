@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`antialiased bg-white text-[#333d47] overflow-x-hidden`}>
         <TooltipProvider>
           <TopBar />
-          <main className="py-6">{children}</main>
+          <main>{children}</main>
         </TooltipProvider>
       </body>
     </html>

@@ -37,22 +37,22 @@ export function Slider() {
             <div className="grid grid-cols-2 items-center h-full max-w-7xl mx-auto px-10">
               <div className="space-y-6 uppercase">
                 <div>
-                  <h2 className="text-6xl font-light tracking-tight">
-                    The New Standard
+                  <h2 className="text-3xl lg:text-6xl font-light tracking-tight">
+                    The New <br /> Standard
                   </h2>
 
-                  <p className="text-xl font-semibold text-gray-600">
-                    Under favorable smartwatches
+                  <p className="text-sm lg:text-xl font-semibold text-gray-600">
+                    Under favorable <br /> smartwatches
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-lg text-gray-500">From</p>
+                  <p className="text-sm lg:text-lg text-gray-500">From</p>
 
-                  <h2 className="text-5xl font-bold flex items-start gap-1">
-                    <span className="text-2xl">$</span>
+                  <h2 className="text-2xl lg:text-5xl font-bold flex items-start gap-1">
+                    <span className="text-base lg:text-2xl">$</span>
                     749
-                    <span className="text-2xl">99</span>
+                    <span className="text-base lg:text-2xl">99</span>
                   </h2>
                 </div>
 

@@ -17,46 +17,99 @@ export function SearchBar() {
   const [searchCategory, setSearchCategory] = useState("All Categories");
 
   return (
-    <div className="relative w-full">
-      <Input
-        placeholder="Search for Product"
-        className="text-black/50 w-full rounded-full border-2 border-primary p-5"
-      />
+    <>
+      <div className="hidden lg:block relative w-full">
+        <Input
+          placeholder="Search for Product"
+          className="text-black/50 w-full rounded-full border-2 border-primary p-5"
+        />
 
-      <div className="h-full absolute top-1/2 right-0 -translate-y-1/2 text-sm text-black/50 flex items-center gap-1">
+        <div className="h-full absolute top-1/2 right-0 -translate-y-1/2 text-sm text-black/50 flex items-center gap-1">
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <span className="flex items-center gap-2">
+                {searchCategory} <ChevronDown size={16} />
+              </span>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuGroup className="text-black/50">
+                <DropdownMenuItem
+                  onClick={() => setSearchCategory("All Categories")}
+                >
+                  All Categories
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setSearchCategory("Two")}>
+                  Two
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setSearchCategory("Three")}>
+                  Three
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setSearchCategory("Four")}>
+                  Four
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Button
+            variant="default"
+            className="h-full px-5 rounded-none rounded-r-full"
+          >
+            <Search size={32} />
+          </Button>
+        </div>
+      </div>
+
+      <div className="flex items-center lg:hidden h-full">
         <DropdownMenu>
-          <DropdownMenuTrigger>
-            <span className="flex items-center gap-2">
-              {searchCategory} <ChevronDown size={16} />
-            </span>
+          <DropdownMenuTrigger className="cursor-pointer">
+            <Search size={20} />
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuGroup className="text-black/50">
-              <DropdownMenuItem
-                onClick={() => setSearchCategory("All Categories")}
+          <DropdownMenuContent className="mt-6 relative w-[65vw] p-0 mx-auto bg-none rounded-full border-none outline-0">
+            <Input
+              placeholder="Search for Product"
+              className="text-black/50 w-full rounded-full border-2 border-primary p-5"
+            />
+
+            <div className="h-full absolute top-1/2 right-0 -translate-y-1/2 text-sm text-black/50 flex items-center gap-1">
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  <span className="flex items-center gap-2">
+                    {searchCategory} <ChevronDown size={16} />
+                  </span>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuGroup className="text-black/50">
+                    <DropdownMenuItem
+                      onClick={() => setSearchCategory("All Categories")}
+                    >
+                      All Categories
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setSearchCategory("Two")}>
+                      Two
+                    </DropdownMenuItem>
+                    <DropdownMenuItem
+                      onClick={() => setSearchCategory("Three")}
+                    >
+                      Three
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setSearchCategory("Four")}>
+                      Four
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <Button
+                variant="default"
+                className="h-full px-5 rounded-none rounded-r-full"
               >
-                All Categories
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setSearchCategory("Two")}>
-                Two
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setSearchCategory("Three")}>
-                Three
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setSearchCategory("Four")}>
-                Four
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
+                <Search size={32} />
+              </Button>
+            </div>
           </DropdownMenuContent>
         </DropdownMenu>
-
-        <Button
-          variant="default"
-          className="h-full px-5 rounded-none rounded-r-full"
-        >
-          <Search size={32} />
-        </Button>
       </div>
-    </div>
+    </>
   );
 }

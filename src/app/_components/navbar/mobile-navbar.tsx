@@ -3,17 +3,15 @@ import { SideBar } from "./side-bar";
 import { SearchBar } from "./search-bar";
 import { Actions } from "./actions";
 
-export function Navbar() {
+export function MobileNavbar() {
   return (
-    <nav className="mt-2 grid grid-cols-12 gap-6 items-center">
-      <div className="col-span-3 flex items-center justify-between">
-        <Logo />
+    <nav className="flex items-center justify-between bg-primary px-12 py-4">
+      <div className="flex items-center gap-2">
         <SideBar />
+        <Logo />
       </div>
-      <div className="col-span-7">
+      <div className="flex items-center gap-2">
         <SearchBar />
-      </div>
-      <div className="col-span-2">
         <Actions />
       </div>
     </nav>

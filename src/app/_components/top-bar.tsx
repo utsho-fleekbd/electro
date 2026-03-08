@@ -8,7 +8,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Card } from "@/components/ui/card";
 
 const TOP_BAR_ITEMS = [
   { icon: Locate, text: "Store Locator" },
@@ -44,7 +43,7 @@ const TOP_BAR_ITEMS = [
 
 export function TopBar() {
   return (
-    <div className="py-2 border-b border-b-black/15 text-sm">
+    <div className="hidden lg:block py-2 border-b border-b-black/15 text-sm">
       <Container className="flex items-center justify-between">
         <h2 className="text-slate-800">
           Welcome to Worldwide Electronics Store
