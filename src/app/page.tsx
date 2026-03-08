@@ -3,6 +3,7 @@ import { Navbar } from "./_components/navbar";
 import { Hero } from "./_components/hero";
 import { MobileNavbar } from "./_components/navbar/mobile-navbar";
 import { ProductBanner } from "./_components/product-banner";
+import { Offer } from "./_components/offer";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       </div>
       <Hero />
       <ProductBanner />
+      <Offer />
     </Container>
   );
 }
