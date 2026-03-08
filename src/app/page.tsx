@@ -6,6 +6,7 @@ import { ProductBanner } from "./_components/product-banner";
 import { Offer } from "./_components/offer";
 import { ProductShowcase } from "./_components/product-showcase";
 import { BestSeller } from "./_components/best-seller";
+import { DiscountBanner } from "./_components/discount-banner";
 
 export default function HomePage() {
   return (
@@ -23,6 +24,8 @@ export default function HomePage() {
       <ProductShowcase />
       <div className="py-3" />
       <BestSeller />
+      <div className="py-3" />
+      <DiscountBanner />
     </Container>
   );
 }
