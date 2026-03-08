@@ -17,10 +17,12 @@ export function ProductCard({
   product,
   largeImage = false,
   vertical = false,
+  showMore = true,
 }: {
   product: Product;
   largeImage?: boolean;
   vertical?: boolean;
+  showMore?: boolean;
 }) {
   return (
     <Card className="rounded overflow-hidden group hover:shadow-xl relative">
@@ -85,8 +87,9 @@ export function ProductCard({
       </CardContent>
 
       {/* Hover Footer */}
-      <div
-        className="
+      {showMore && (
+        <div
+          className="
       absolute bottom-0 left-0 w-full
       bg-background
       border-t border-gray-300/90
@@ -96,14 +99,15 @@ export function ProductCard({
       group-hover:translate-y-0
       transition-transform duration-300
     "
-      >
-        <div className="flex products-center gap-2 text-xs cursor-pointer">
-          <GitCompare size={16} /> Compare
+        >
+          <div className="flex products-center gap-2 text-xs cursor-pointer">
+            <GitCompare size={16} /> Compare
+          </div>
+          <div className="flex products-center gap-2 text-xs cursor-pointer">
+            <Heart size={16} /> Add to Wishlist
+          </div>
         </div>
-        <div className="flex products-center gap-2 text-xs cursor-pointer">
-          <Heart size={16} /> Add to Wishlist
-        </div>
-      </div>
+      )}
     </Card>
   );
 }

@@ -7,6 +7,7 @@ import { Offer } from "./_components/offer";
 import { ProductShowcase } from "./_components/product-showcase";
 import { BestSeller } from "./_components/best-seller";
 import { DiscountBanner } from "./_components/discount-banner";
+import { RecentlyViewed } from "./_components/recently-viewed";
 
 export default function HomePage() {
   return (
@@ -26,6 +27,8 @@ export default function HomePage() {
       <BestSeller />
       <div className="py-3" />
       <DiscountBanner />
+      <div className="py-3" />
+      <RecentlyViewed />
     </Container>
   );
 }
