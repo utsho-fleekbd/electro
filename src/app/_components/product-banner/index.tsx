@@ -10,7 +10,7 @@ import Link from "next/link";
 const BANNER_ITEMS = [
   {
     text: (
-      <p className="uppercase text-lg font-light">
+      <p className="uppercase text-base md:text-lg font-light">
         Catch big <span className="font-bold">deals</span> on the cameras
       </p>
     ),
@@ -18,7 +18,7 @@ const BANNER_ITEMS = [
   },
   {
     text: (
-      <p className="uppercase text-lg font-light">
+      <p className="uppercase text-base md:text-lg font-light">
         Catch big <span className="font-bold">deals</span> on the cameras
       </p>
     ),
@@ -26,7 +26,7 @@ const BANNER_ITEMS = [
   },
   {
     text: (
-      <p className="uppercase text-lg font-light">
+      <p className="uppercase text-base md:text-lg font-light">
         Catch big <span className="font-bold">deals</span> on the cameras
       </p>
     ),
@@ -34,7 +34,7 @@ const BANNER_ITEMS = [
   },
   {
     text: (
-      <p className="uppercase text-lg font-light">
+      <p className="uppercase text-base md:text-lg font-light">
         Catch big <span className="font-bold">deals</span> on the cameras
       </p>
     ),
@@ -55,9 +55,9 @@ export function ProductBanner() {
             alt="Product Image"
             width={200}
             height={200}
-            className="lg:size-20 object-cover rounded-2xl"
+            className="size-16 sm:size-20 object-cover rounded-2xl"
           />
-          <div className="space-y-4">
+          <div className="space-y-1 md:space-y-4">
             {item.text}
             <Link
               href=""

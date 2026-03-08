@@ -5,6 +5,7 @@ import { MobileNavbar } from "./_components/navbar/mobile-navbar";
 import { ProductBanner } from "./_components/product-banner";
 import { Offer } from "./_components/offer";
 import { ProductShowcase } from "./_components/product-showcase";
+import { BestSeller } from "./_components/best-seller";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,8 @@ export default function HomePage() {
       <Offer />
       <div className="py-3" />
       <ProductShowcase />
+      <div className="py-3" />
+      <BestSeller />
     </Container>
   );
 }

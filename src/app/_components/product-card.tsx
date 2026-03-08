@@ -3,6 +3,7 @@ import { GitCompare, Heart, ShoppingCart } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 export type Product = {
   category: string;
@@ -12,20 +13,25 @@ export type Product = {
   price: number;
 };
 
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({
+  product,
+  largeImage = false,
+  vertical = false,
+}: {
+  product: Product;
+  largeImage?: boolean;
+  vertical?: boolean;
+}) {
   return (
     <Card className="rounded overflow-hidden group hover:shadow-xl relative">
-      <CardContent className="p-1 px-4 space-y-3 pb-12">
-        {/* Category */}
-        <p className="text-xs text-muted-foreground">{product.category}</p>
-
-        {/* Name */}
-        <h3 className="text-sm font-medium line-clamp-2 min-h-10">
-          {product.name}
-        </h3>
-
-        {/* Image */}
-        <div className="relative w-full h-40">
+      <CardContent className="p-2 px-4 flex items-center justify-between gap-6">
+        <div
+          className={cn(
+            "relative w-full",
+            largeImage ? "h-64" : "h-40",
+            vertical ? "block" : "hidden",
+          )}
+        >
           <Image
             src={product.img}
             alt={product.name}
@@ -34,21 +40,47 @@ export function ProductCard({ product }: { product: Product }) {
           />
         </div>
 
-        {/* Price */}
-        <div className="flex products-center justify-between">
-          <div className="flex flex-col gap-2">
-            {product.originalPrice && (
-              <span className="text-sm text-red-500 line-through">
-                ${product.originalPrice}
-              </span>
-            )}
+        <div className="space-y-3 w-full">
+          {/* Category */}
+          <p className="text-xs text-muted-foreground">{product.category}</p>
 
-            <span className="font-semibold text-base">${product.price}</span>
+          {/* Name */}
+          <h3 className="text-sm font-bold line-clamp-2 min-h-10 text-blue-600/95">
+            {product.name}
+          </h3>
+
+          {/* Image */}
+          <div
+            className={cn(
+              "relative w-full",
+              largeImage ? "h-64" : "h-40",
+              vertical ? "hidden" : "block",
+            )}
+          >
+            <Image
+              src={product.img}
+              alt={product.name}
+              fill
+              className="object-contain"
+            />
           </div>
 
-          <Button size="icon" className="rounded-full hover:-translate-y-0.5">
-            <ShoppingCart size={18} />
-          </Button>
+          {/* Price */}
+          <div className="flex products-center justify-between">
+            <div className="flex flex-col gap-2">
+              {product.originalPrice && (
+                <span className="text-sm text-red-500 line-through">
+                  ${product.originalPrice}
+                </span>
+              )}
+
+              <span className="font-semibold text-base">${product.price}</span>
+            </div>
+
+            <Button size="icon" className="rounded-full hover:-translate-y-0.5">
+              <ShoppingCart size={18} />
+            </Button>
+          </div>
         </div>
       </CardContent>
 

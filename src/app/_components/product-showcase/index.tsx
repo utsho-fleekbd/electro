@@ -74,7 +74,7 @@ export function ProductShowcase() {
 
         return (
           <div key={index} className={span}>
-            <ProductCard product={product} />
+            <ProductCard product={product} largeImage />
           </div>
         );
       })}
@@ -82,7 +82,7 @@ export function ProductShowcase() {
   );
 
   return (
-    <Tabs defaultValue="deals" className="w-full">
+    <Tabs defaultValue="deals" className="p-1 w-full bg-gray-200/25">
       <div className="w-full overflow-x-auto no-scrollbar">
         <TabsList className="w-max">
           <TabsTrigger value="deals">Best Deals</TabsTrigger>

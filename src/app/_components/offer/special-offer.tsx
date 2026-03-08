@@ -25,7 +25,7 @@ export function SpecialOffer() {
       />
 
       {/* Product Info */}
-      <h1 className="text-blue-800 font-bold max-w-64">
+      <h1 className="text-blue-600/95 font-bold max-w-64">
         Game Console Controller + USB 3.0 Cable
       </h1>
 
@@ -43,7 +43,7 @@ export function SpecialOffer() {
         </div>
       </div>
 
-      <div className="w-full h-5 relative bg-gray-300/90 rounded-4xl">
+      <div className="w-full h-5 relative bg-gray-200/95 rounded-4xl">
         <div className="absolute inset-0 w-1/4 h-full bg-primary z-10 rounded-4xl"></div>
       </div>
 
@@ -51,21 +51,21 @@ export function SpecialOffer() {
 
       <div className="flex gap-px">
         <div className="flex flex-col justify-center items-center">
-          <div className="size-16 bg-gray-300/90 text-3xl flex items-center justify-center rounded-xs">
+          <div className="size-16 bg-gray-200/95 text-3xl flex items-center justify-center rounded-xs">
             00
           </div>
           <span className="text-sm uppercase">hours</span>
         </div>
         <div className="text-3xl h-16 flex items-center justify-center">:</div>
         <div className="flex flex-col justify-center items-center">
-          <div className="size-16 bg-gray-300/90 text-3xl flex items-center justify-center rounded-xs">
+          <div className="size-16 bg-gray-200/95 text-3xl flex items-center justify-center rounded-xs">
             00
           </div>
           <span className="text-sm uppercase">mins</span>
         </div>
         <div className="text-3xl h-16 flex items-center justify-center">:</div>
         <div className="flex flex-col justify-center items-center">
-          <div className="size-16 bg-gray-300/90 text-3xl flex items-center justify-center rounded-xs">
+          <div className="size-16 bg-gray-200/95 text-3xl flex items-center justify-center rounded-xs">
             00
           </div>
           <span className="text-sm uppercase">secs</span>

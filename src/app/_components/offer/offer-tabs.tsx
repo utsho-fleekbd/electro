@@ -2,6 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { shuffle } from "@/lib/utils";
+import { Product, ProductCard } from "../product-card";
 
 import mic from "./_assets/mic.jpg";
 import tablet from "./_assets/tablet.jpg";
@@ -9,7 +10,6 @@ import headphone from "./_assets/headphone.jpg";
 import smartphone from "./_assets/smart-phone.jpg";
 import camera from "./_assets/camera.jpg";
 import printer from "./_assets/printer.jpg";
-import { Product, ProductCard } from "../product-card";
 
 const items = [
   {
