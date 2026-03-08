@@ -8,27 +8,29 @@ import { ProductShowcase } from "./_components/product-showcase";
 import { BestSeller } from "./_components/best-seller";
 import { DiscountBanner } from "./_components/discount-banner";
 import { RecentlyViewed } from "./_components/recently-viewed";
+import Newsletter from "./_components/newsletter";
 
 export default function HomePage() {
   return (
-    <Container className="space-y-8">
-      <div className="hidden lg:block">
-        <Navbar />
-      </div>
-      <div className="block lg:hidden">
-        <MobileNavbar />
-      </div>
-      <Hero />
-      <ProductBanner />
-      <Offer />
-      <div className="py-3" />
-      <ProductShowcase />
-      <div className="py-3" />
-      <BestSeller />
-      <div className="py-3" />
-      <DiscountBanner />
-      <div className="py-3" />
-      <RecentlyViewed />
-    </Container>
+    <>
+      <Container className="space-y-8">
+        <div className="hidden lg:block">
+          <Navbar />
+        </div>
+        <div className="block lg:hidden">
+          <MobileNavbar />
+        </div>
+        <Hero />
+        <div className="space-y-10">
+          <ProductBanner />
+          <Offer />
+          <ProductShowcase />
+          <BestSeller />
+          <DiscountBanner />
+          <RecentlyViewed />
+        </div>
+      </Container>
+      <Newsletter />
+    </>
   );
 }
