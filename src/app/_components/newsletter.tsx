@@ -8,9 +8,9 @@ import { Send } from "lucide-react";
 export default function Newsletter() {
   return (
     <div className="bg-primary">
-      <Container className="py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-black">
+      <Container className="py-5 flex flex-col lg:flex-row items-center justify-between gap-2 text-black">
         <div className="flex items-center gap-3">
-          <Send size={44} strokeWidth={1.3} />
+          <Send size={36} strokeWidth={1.3} />
           <h3 className="text-xl">Sign up to Newsletter</h3>
         </div>
 
@@ -24,7 +24,7 @@ export default function Newsletter() {
             e.preventDefault();
             alert("Subscribed");
           }}
-          className="relative w-full md:w-1/3"
+          className="relative w-4/5 md:w-2/3 lg:w-1/3"
         >
           <Input
             className="bg-white rounded-full p-5"

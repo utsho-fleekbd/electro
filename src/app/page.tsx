@@ -30,6 +30,7 @@ export default function HomePage() {
           <RecentlyViewed />
         </div>
       </Container>
+      <div className="py-4" />
       <Newsletter />
     </>
   );
