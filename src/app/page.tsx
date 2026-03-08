@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/container";
 import { Navbar } from "./_components/navbar";
 import { Hero } from "./_components/hero";
 import { MobileNavbar } from "./_components/navbar/mobile-navbar";
+import { ProductBanner } from "./_components/product-banner";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
         <MobileNavbar />
       </div>
       <Hero />
+      <ProductBanner />
     </Container>
   );
 }
