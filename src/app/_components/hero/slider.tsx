@@ -22,7 +22,7 @@ const SLIDE_ITEMS = [
 
 export function Slider() {
   return (
-    <div className="w-full h-fit bg-gray-100 rounded">
+    <div className="w-full h-full bg-gray-100/75 rounded">
       <Swiper
         className="h-full"
         modules={[Pagination, Scrollbar, A11y, Autoplay]}
@@ -33,7 +33,7 @@ export function Slider() {
         loop
       >
         {SLIDE_ITEMS.map((item, i) => (
-          <SwiperSlide key={i}>
+          <SwiperSlide key={i} className="py-12 md:py-6">
             <div className="grid grid-cols-2 items-center h-full max-w-7xl mx-auto px-10">
               <div className="space-y-6 uppercase">
                 <div>

@@ -114,16 +114,16 @@ export function OfferTabs() {
       bg-background
       border-t border-gray-300/90
       px-4 py-2
-      flex items-center justify-between
+      flex flex-col md:flex-row items-start md:items-center justify-between gap-1 md:gap-0
       translate-y-full
       group-hover:translate-y-0
       transition-transform duration-300
     "
       >
-        <div className="flex items-center gap-2 text-xs">
+        <div className="flex items-center gap-2 text-xs cursor-pointer">
           <GitCompare size={16} /> Compare
         </div>
-        <div className="flex items-center gap-2 text-xs">
+        <div className="flex items-center gap-2 text-xs cursor-pointer">
           <Heart size={16} /> Add to Wishlist
         </div>
       </div>

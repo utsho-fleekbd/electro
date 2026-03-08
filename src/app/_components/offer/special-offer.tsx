@@ -3,7 +3,7 @@ import controller from "./_assets/controller.jpg";
 
 export function SpecialOffer() {
   return (
-    <div className="p-4 rounded-xl border-2 border-primary w-full flex flex-col items-center gap-4">
+    <div className="p-4 rounded-xl border-2 border-primary w-full max-w-md mx-auto md:mx-0 flex flex-col items-center gap-4">
       {/* Header */}
       <div className="w-full flex items-center justify-between text-center">
         <h3 className="text-3xl text-left tracking-tight">

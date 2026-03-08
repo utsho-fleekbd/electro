@@ -5,7 +5,7 @@ import { Actions } from "./actions";
 
 export function MobileNavbar() {
   return (
-    <nav className="flex items-center justify-between bg-primary px-12 py-4">
+    <nav className="flex items-center justify-between bg-primary px-6 py-4">
       <div className="flex items-center gap-2">
         <SideBar />
         <Logo />

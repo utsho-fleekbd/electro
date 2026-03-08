@@ -1,3 +1,5 @@
+import { Menu, X } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -8,7 +10,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Logo } from "@/components/ui/logo";
-import { Menu, X } from "lucide-react";
+import { SideBar as SideBarContent } from "../hero/side-bar";
 
 export function SideBar() {
   return (
@@ -27,6 +29,8 @@ export function SideBar() {
             </Button>
           </DrawerClose>
         </DrawerHeader>
+
+        <SideBarContent />
       </DrawerContent>
     </Drawer>
   );
