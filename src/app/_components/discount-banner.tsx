@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export function DiscountBanner() {
   return (
     <div className="max-w-6xl mx-auto p-4 bg-gray-200 flex items-center justify-center">
-      <div className="flex items-center gap-6">
+      <div className="flex flex-col md:flex-row items-center gap-6">
         <h2 className="uppercase text-2xl font-light">
           Shop and <span className="font-bold">save big</span> on hottest
           tablets

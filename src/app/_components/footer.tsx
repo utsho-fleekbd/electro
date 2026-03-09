@@ -4,7 +4,7 @@ import { Facebook, Instagram, Github, Headset, TwitchIcon } from "lucide-react";
 
 export default function Footer() {
   return (
-    <Container className="py-12">
+    <Container className="py-12 px-6 lg:px-0">
       <footer className="grid grid-cols-1 lg:grid-cols-5 gap-3">
         <div className="grid-cols-1 lg:col-span-2 space-y-4">
           <Logo />
